@@ -1,0 +1,346 @@
+.hero__wrapper-main {
+    position: relative;
+}
+.hero__wrapper-main::before {
+    display: block;
+    content: '';
+    width: 90%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: var(--first-brand-color);
+    border-radius: 0 0 0 5rem;
+}
+.hero {
+    text-align: center;
+    position: relative;
+    padding: 15rem 0 20rem;
+}
+.hero .title {
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+.hero .text {
+    margin: 0 auto;
+    max-width: 35rem;
+    color: var(--fourth-brand-color);
+}
+.hero__btn-box {
+    width: fit-content;
+    padding: 1rem 4rem;
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--third-brand-color);
+    border-radius: 1rem;
+}
+.hero__list {
+    display: none;
+}
+
+
+
+
+.question {
+    padding: 12rem 0;
+    text-align: center;
+}
+.question .sub-title {
+    margin-bottom: 6rem;
+}
+.question .sub-title span,
+.policy .sub-title span {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+.question__sub-title {
+    font-family: var(--title-font);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.question__item:not(:last-child) {
+    margin-bottom: 6rem;
+}
+.question__list {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+
+
+
+
+.contacts {
+    padding: 15rem 0;
+    text-align: center;
+}
+.contacts .sub-title {
+    margin-bottom: 2rem;
+}
+.contacts__box {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8rem;
+}
+.contacts__box .text {
+    color: var(--fourth-brand-color);
+}
+.contacts__item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+
+
+
+.policy {
+    padding: 10rem 0;
+    text-align: center;
+}
+.policy .sub-title {
+    margin-bottom: 8rem;
+}
+.policy__title {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.policy__block {
+    max-width: 45rem;
+    margin: 0 auto;
+}
+.policy__block--top {
+    margin-bottom: 6rem;
+}
+.policy .text {
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+@media screen and (min-width: 1440px)  {
+    .hero__wrapper-main {
+        margin-bottom: 10rem;
+    }
+    .hero__btn-box {
+        padding: 1rem 35rem 1rem 2rem;
+        bottom: -4rem;
+        left: calc(10% + 10rem);
+        transform: translate(0, 0);
+        -webkit-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        -moz-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+    }
+    .hero__list {
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        grid-template-rows: repeat(3, 23rem);
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        column-gap: 2rem;
+        row-gap: 1rem;
+        max-width: 50%;
+    }
+    .hero__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        -webkit-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        -moz-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+    }
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20rem;
+        text-align: left;
+        padding-top: 25rem;
+    }
+    .hero .text {
+        margin-left: 0;
+    }
+    .hero__item:nth-child(1) {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+    .hero__item:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; 
+    }
+    .hero__item:nth-child(3) {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4; 
+    }
+    .hero__block {
+        width: 40%;
+        padding: 5rem 2rem;
+        border-radius: 1rem;
+        background-color: var(--sub-text-color);
+        -webkit-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        -moz-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+    }
+
+
+
+
+    .question,
+    .policy {
+        padding: 15rem 10rem;
+    }
+    .question__title,
+    .policy .sub-title {
+        text-align: left;
+        position: relative;
+    }
+    .question__title::before,
+    .policy .sub-title::before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: .3rem;
+        background-color: var(--second-brand-color);
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+    .question__title span,
+    .policy .sub-title span {
+        background-color: var(--main-bg-color);
+        position: relative;
+        padding-right: 3rem;
+    }
+    .question__item {
+        padding: 4rem;
+        border-radius: 1rem;
+        max-width: 60rem;
+        position: relative;
+        -webkit-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        -moz-box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+        box-shadow: .5rem .5rem 3rem 0rem rgba(0,0,0,0.2);
+    }
+    .question__item:nth-child(1) {
+        background-color: var(--first-brand-color);
+    }
+    .question__item:nth-child(2) {
+        background-color: rgba(255, 83, 79, .3);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .question__item:nth-child(3) {
+        background-color: var(--third-brand-color);
+        margin-left: auto;
+    }
+    .question__item:nth-child(3) .text,
+    .question__item:nth-child(3) .question__sub-title {
+        color: var(--sub-text-color);
+    }
+    .question__list {
+        max-width: 100%;
+    }
+    .question__item:nth-child(1)::after,
+    .question__item:nth-child(2)::after {
+        display: block;
+        content: '';
+        width: 6rem;
+        height: 10rem;
+        border-right: .3rem dashed var(--second-brand-color);
+        border-top: .3rem dashed var(--second-brand-color);
+        position: absolute;
+        bottom: -6rem;
+        right: -6rem;
+        border-radius: 0 1rem 0 0;
+    }
+
+
+
+    .contacts__box {
+        padding: 3rem;
+        border: .3rem dashed var(--second-brand-color);
+        border-radius: 1rem;
+    }
+    .contacts__list {
+        display: flex;
+        align-items: center;
+        background-color: var(--fifth-brand-color);
+        width: fit-content;
+        border-radius: 0 10rem 10rem 0;
+        padding: 4rem 6rem 4rem 3rem;
+        position: relative;
+    }
+    .contacts__list::before {
+        display: block;
+        content: '';
+        width: 2rem;
+        height: 100%;
+        background-color: var(--fifth-brand-color);
+        position: absolute;
+        top: 0;
+        left: -2rem;
+    }
+    .contacts__item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 5rem;
+        position: relative;
+    }
+    .contacts__item:not(:last-child)::after {
+        display: block;
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--second-brand-color);
+        top: 50%;
+        position: absolute;
+        right: -3rem;
+        transform: translate(0, -50%);
+        border-radius: 50%;
+    }
+
+
+
+
+    .policy {
+        text-align: left;
+    }
+    .policy__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8rem;
+    }
+    .policy__block--top {
+        margin-bottom: 0;
+    }
+    .policy__block {
+        margin: 0;
+        position: relative;
+    }
+    .policy__block::before {
+        display: block;
+        content: '';
+        width: 6rem; 
+        height: 6rem;
+        background-color: var(--third-brand-color);
+        position: absolute;
+        left: -7rem;
+        top: 0;
+        border-radius: 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Outlined' transform='translate(-613.000000, -199.000000)'%3E%3Cg id='Action' transform='translate(100.000000, 100.000000)'%3E%3Cg id='Outlined-/-Action-/-assignment_return' transform='translate(510.000000, 98.000000)'%3E%3Cg%3E%3Cpolygon id='Path' points='0 0 24 0 24 24 0 24'%3E%3C/polygon%3E%3Cpath d='M12,14 L16,14 L16,10 L12,10 L12,7 L7,12 L12,17 L12,14 Z M19,3 L14.82,3 C14.4,1.84 13.3,1 12,1 C10.7,1 9.6,1.84 9.18,3 L5,3 C4.86,3 4.73,3.01 4.6,3.04 C4.21,3.12 3.86,3.32 3.59,3.59 C3.41,3.77 3.26,3.99 3.16,4.23 C3.06,4.46 3,4.72 3,5 L3,19 C3,19.27 3.06,19.54 3.16,19.78 C3.26,20.02 3.41,20.23 3.59,20.42 C3.86,20.69 4.21,20.89 4.6,20.97 C4.73,20.99 4.86,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,5 C21,3.9 20.1,3 19,3 Z M12,2.75 C12.41,2.75 12.75,3.09 12.75,3.5 C12.75,3.91 12.41,4.25 12,4.25 C11.59,4.25 11.25,3.91 11.25,3.5 C11.25,3.09 11.59,2.75 12,2.75 Z M19,19 L5,19 L5,5 L19,5 L19,19 Z' id='🔹-Icon-Color' fill='%23fff'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 3rem;
+    }
+    .policy__block.policy__block--top::before {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Rounded' transform='translate(-682.000000, -1261.000000)'%3E%3Cg id='Communication' transform='translate(100.000000, 1162.000000)'%3E%3Cg id='-Round-/-Communication-/-phonelink_lock' transform='translate(578.000000, 98.000000)'%3E%3Cg transform='translate(0.000000, 0.000000)'%3E%3Cpolygon id='Path' points='0 0 24 0 24 24 0 24'%3E%3C/polygon%3E%3Cpath d='M19,1 L9,1 C7.9,1 7,1.9 7,3 L7,5 C7,5.55 7.45,6 8,6 C8.55,6 9,5.55 9,5 L9,4 L19,4 L19,20 L9,20 L9,19 C9,18.45 8.55,18 8,18 C7.45,18 7,18.45 7,19 L7,21 C7,22.1 7.9,23 9,23 L19,23 C20.1,23 21,22.1 21,21 L21,3 C21,1.9 20.1,1 19,1 Z M10.8,11 L10.8,9.5 C10.8,8.1 9.4,7 8,7 C6.6,7 5.2,8.1 5.2,9.5 L5.2,11 C4.6,11 4,11.6 4,12.2 L4,15.7 C4,16.4 4.6,17 5.2,17 L10.7,17 C11.4,17 12,16.4 12,15.8 L12,12.3 C12,11.6 11.4,11 10.8,11 Z M9.5,11 L6.5,11 L6.5,9.5 C6.5,8.7 7.2,8.2 8,8.2 C8.8,8.2 9.5,8.7 9.5,9.5 L9.5,11 Z' id='🔹Icon-Color' fill='%23fff'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+}
+
