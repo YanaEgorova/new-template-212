@@ -53,21 +53,19 @@ function cartAdd(e) {
         okay = false;
     }
 
-    // ADD TO LOCAL STORAGE
-    if (okay){
+  // ADD TO LOCAL STORAGE
+  if (okay){
+    if(localStorage(id, amount.textContent) != false) {
         if(cartSpan) {
             cartSpan.textContent = Number(amount.textContent) + Number(cartSpan.textContent);
         }
-
         setAmountToCartSpan();
-
-        localStorage(id, amount.textContent);
-        console.log('btn', btn)
         const successMessageSpan = document.querySelector('.js_success-product-name');
         const successMessage = document.querySelector('.js_success-message');
         const name = document.querySelector('.js_prod__title').textContent;
         showSuccessMessage(successMessage, successMessageSpan, name);
     }
+}
     
 }
 
